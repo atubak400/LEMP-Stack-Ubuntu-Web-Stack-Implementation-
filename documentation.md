@@ -51,11 +51,11 @@ By following these steps, you'll successfully implement a LEMP stack, creating a
 
 Step 1: Log in to aws and create an ubuntu ec2 instance. 
 
-![Creating an ubuntu ec2 instance](./Images/1.png)
+![Creating an ubuntu ec2 instance](./Images/01.png)
 
 Instance Created!
 
-![Instance Created](./Images/2.png)
+![Instance Created](./Images/02.png)
 
 ---
 
@@ -63,11 +63,11 @@ Instance Created!
 
 Step 2: Connect to Ubuntu Instance using Instance Connect.
 
-![Connecting to our Ubuntu Instance](./Images/3.png)
+![Connecting to our Ubuntu Instance](./Images/03.png)
 
 Connection Successful!
 
-![Connection Successful](./Images/4.png)
+![Connection Successful](./Images/04.png)
 
 ---
 
@@ -81,7 +81,7 @@ Connection Successful!
 
 Step 3: Update the package repository by running `sudo apt update`
 
-![sudo apt update](./Images/5.png)
+![sudo apt update](./Images/05.png)
 
 ---
 
@@ -89,7 +89,7 @@ Step 3: Update the package repository by running `sudo apt update`
 
 Step 4: Install Apache by running `sudo apt install apache2`
 
-![sudo apt install apache2](./Images/6.png)
+![sudo apt install apache2](./Images/06.png)
 
 ---
 
@@ -98,7 +98,7 @@ Step 4: Install Apache by running `sudo apt install apache2`
 Step 5: Verify Apache is running by running `sudo systemctl status apache2`.
 If you see a green colored "active(running)", Apache successfully insstalled and started on port 80!.
 
-![sudo systemctl status apache2](./Images/7.png)
+![sudo systemctl status apache2](./Images/07.png)
 
 ---
 
@@ -108,7 +108,7 @@ Step 6: Open a web browser of your choice (Chrome recommended), navigate to `htt
 
 If you see the page below then your web server is correctly installed and accessible through the firewall.
 
-![Apache home page](./Images/8.png)
+![Apache home page](./Images/09.png)
 
 ---
 
