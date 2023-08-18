@@ -73,7 +73,7 @@ Connection Successful!
 
 ---
 
-## B. **Install Apache**
+## B. **Install Nginx**
 
 ---
 
@@ -87,18 +87,18 @@ Step 3: Update the package repository by running `sudo apt update`
 
 ---
 
-Step 4: Install Apache by running `sudo apt install apache2`
+Step 4: Install Nginx by running `sudo apt install nginx`
 
-![sudo apt install apache2](./Images/06.png)
-
----
+![sudo apt install nginx](./Images/06.png)
 
 ---
 
-Step 5: Verify Apache is running by running `sudo systemctl status apache2`.
-If you see a green colored "active(running)", Apache successfully insstalled and started on port 80!.
+---
 
-![sudo systemctl status apache2](./Images/07.png)
+Step 5: Verify Nginx is running by running `sudo systemctl status nginx`.
+If you see a green colored "active(running)", Nginx successfully installed and started on port 80!.
+
+![sudo systemctl status nginx](./Images/07.png)
 
 ---
 
@@ -108,7 +108,7 @@ Step 6: Open a web browser of your choice (Chrome recommended), navigate to `htt
 
 If you see the page below then your web server is correctly installed and accessible through the firewall.
 
-![Apache home page](./Images/09.png)
+![Nginx home page](./Images/09.png)
 
 ---
 
