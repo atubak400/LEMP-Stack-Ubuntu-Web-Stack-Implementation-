@@ -178,22 +178,10 @@ Step 12: Install PHP and required modules by running `sudo apt install php-fpm p
 ---
 
 Step 13: Create a root web directory for my website by running `sudo mkdir /var/www/projectLEMP`
-
-![sudo mysql](./Images/16.png)
-
----
-
----
-
 Step 14: Assign ownership of the directory to current user by running `sudo chown -R $USER:$USER /var/www/projectLEMP`
-
-![Root folder ownership](./Images/17.png)
-
----
-
----
-
 Step 15: Open a new Configuration file in Nginx's sites-enabled directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.
+
+![root web directory](./Images/16.png)
 
 ```nginx
 # /etc/nginx/sites-available/projectLEMP
@@ -231,7 +219,7 @@ Save and exit the nano editor with Ctrl + X, then press Y followed by Enter to s
 
 Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory.`sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`. This will tell Nginx to use the configuration next time it is reloaded.
 
-![activate configuration](./Images/17.png)
+![activate configuration](./Images/18.png)
 
 ---
 
@@ -242,7 +230,7 @@ You should see:<br>
 `nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`<br>
 `nginx: configuration file /etc/nginx/nginx.conf test is successful`<br>
 
-![Test configuration](./Images/18.png)
+![Test configuration](./Images/19.png)
 
 If any errors are reported, go back to your configuration file to review its contents before continuing.
 
