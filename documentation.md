@@ -122,7 +122,7 @@ If you see the page below then your web server is correctly installed and access
 
 Step 7: Use apt to install mysql-server by running `sudo apt install mysql-server`
 
-![sudo apt install mysql-server](./Images/09.png)
+![sudo apt install mysql-server](./Images/10.png)
 
 ---
 
@@ -131,7 +131,7 @@ Step 7: Use apt to install mysql-server by running `sudo apt install mysql-serve
 
 Step 8: Log in to mysql console by running `sudo mysql`
 
-![sudo mysql](./Images/10.png)
+![sudo mysql](./Images/11.png)
 
 ---
 
@@ -139,7 +139,7 @@ Step 8: Log in to mysql console by running `sudo mysql`
 
 Step 9: Set password for mysql root user by running `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';` and exit mysql shell by running `exit`
 
-![sudo systemctl status apache2](./Images/11.png)
+![sudo systemctl status apache2](./Images/12.png)
 
 ---
 
@@ -147,7 +147,7 @@ Step 9: Set password for mysql root user by running `ALTER USER 'root'@'localhos
 
 Step 10: Run the MySQL secure installation script to improve security `sudo mysql_secure_installation`
 
-![sudo systemctl status apache2](./Images/12.png)
+![sudo systemctl status apache2](./Images/13.png)
 
 ---
 
@@ -155,7 +155,7 @@ Step 10: Run the MySQL secure installation script to improve security `sudo mysq
 
 Step 11: Exit mysql shell by running `exit`
 
-![sudo systemctl status apache2](./Images/13.png)
+![sudo systemctl status apache2](./Images/14.png)
 
 ---
 
