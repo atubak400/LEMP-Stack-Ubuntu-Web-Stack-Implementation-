@@ -20,22 +20,18 @@ PHP, a versatile scripting language, is a cornerstone in the LEMP stack. This la
 
 # **The steps in our implementation process include**
 ### a. Setting up and Connecting to an Ubuntu Virtual Machine
-Begin by launching an EC2 instance on AWS with Ubuntu as the chosen operating system. Connect to the instance using SSH for subsequent configuration steps.
 
 ### b. Installing Nginx
-Install and configure Nginx as the web server. Update the package repository, install Nginx, and set up any necessary firewall rules to allow HTTP traffic.
 
 ### c. Installing MySQL
-Proceed to install MySQL to manage your database needs. Secure the installation and create databases and user accounts as required for your web applications.
 
 ### d. Installing PHP
-Install PHP along with necessary modules to enable dynamic content generation. This allows PHP scripts to be executed on the server side.
 
-### e. Configuring Nginx for PHP
-Configure Nginx to work seamlessly with PHP. This involves setting up FastCGI to process PHP requests and associating appropriate file extensions.
+### e. Configuring Nginx to use PHP Processor
 
-### f. Enabling PHP on the Website
-Create a sample PHP file to test the integration of PHP with Nginx. Place this file in the appropriate web directory and access it through a web browser. Ensure that PHP code execution is successful.
+### f. Testing PHP with Nginx
+
+### g. Retrieving data from MySQL database with PHP
 
 By following these steps, you'll successfully implement a LEMP stack, creating a robust environment to develop and host dynamic web applications.
 
@@ -175,7 +171,7 @@ Step 12: Install PHP and required modules by running `sudo apt install php-fpm p
 
 ---
 
-## E. **Enabling php on the website**
+## E. **Configuring Nginx to use PHP Processor**
 
 ---
 
@@ -189,9 +185,21 @@ Step 13:
 
 ---
 
+### f. **Testing PHP with Nginx**
+
+---
+
+---
+
 Step 14: To edit the dir.conf file and change the order in which the index.php file is listed, run `sudo nano /etc/apache2/mods-enabled/dir.conf` 
 
 ![sudo systemctl status apache2](./Images/17.png)
+
+---
+
+---
+
+## G. **Retrieving data from MySQL database with PHP**
 
 ---
 
