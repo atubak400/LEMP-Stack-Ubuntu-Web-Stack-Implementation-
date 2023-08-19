@@ -169,7 +169,7 @@ Step 11: Exit mysql shell by running `exit`
 
 Step 12: Install PHP and required modules by running `sudo apt install php libapache2-mod-php php-mysql`
 
-![sudo apt install mysql-server](./Images/14.png)
+![sudo apt install mysql-server](./Images/15.png)
 
 ---
 
@@ -177,7 +177,7 @@ Step 12: Install PHP and required modules by running `sudo apt install php libap
 
 Step 13: Confirm your php version by running `php -v`
 
-![sudo mysql](./Images/15.png)
+![sudo mysql](./Images/16.png)
 
 ---
 
