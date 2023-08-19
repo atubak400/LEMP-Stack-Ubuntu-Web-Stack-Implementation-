@@ -375,7 +375,7 @@ Step 22: For security reasons remove the index.php file by running `sudo rm /var
 
 ---
 
-# Congratulations! You have successfully installed Apache, MySql and php on your server.
+# Congratulations! You have successfully installed Nginx, MySql and php on your server.
 
 ---
 
