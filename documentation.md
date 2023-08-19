@@ -193,7 +193,7 @@ Step 14: Assign ownership of the directory to current user by running `sudo chow
 
 ---
 
-Step 15: Open a new Configuration file in the sites available directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.
+Step 15: Open a new Configuration file in Nginx's sites-enabled directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.
 
 ```nginx
 # /etc/nginx/sites-available/projectLEMP
@@ -224,6 +224,27 @@ server {
 }
 ```
 Save and exit the nano editor with Ctrl + X, then press Y followed by Enter to save your changes. 
+
+---
+
+---
+
+Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory.`sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`. This will tell Nginx to use the configuration next time it is reloaded.
+
+![activate configuration](./Images/17.png)
+
+---
+
+---
+
+Step 17: Test your configuration for syntax errors by typing `sudo nginx -t`
+You should see:
+`nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+`
+![Test configuration](./Images/18.png)
+
+If any errors are reported, go back to your configuration file to review its contents before continuing.
 
 ---
 
