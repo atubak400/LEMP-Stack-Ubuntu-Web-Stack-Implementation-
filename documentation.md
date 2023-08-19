@@ -167,17 +167,9 @@ Step 11: Exit mysql shell by running `exit`
 
 ---
 
-Step 12: Install PHP and required modules by running `sudo apt install php libapache2-mod-php php-mysql`
+Step 12: Install PHP and required modules by running `sudo apt install php-fpm php-mysql`
 
 ![sudo apt install mysql-server](./Images/15.png)
-
----
-
----
-
-Step 13: Confirm your php version by running `php -v`
-
-![sudo mysql](./Images/16.png)
 
 ---
 
@@ -189,9 +181,17 @@ Step 13: Confirm your php version by running `php -v`
 
 ---
 
+Step 13: 
+
+![sudo mysql](./Images/16.png)
+
+---
+
+---
+
 Step 14: To edit the dir.conf file and change the order in which the index.php file is listed, run `sudo nano /etc/apache2/mods-enabled/dir.conf` 
 
-![sudo systemctl status apache2](./Images/16.png)
+![sudo systemctl status apache2](./Images/17.png)
 
 ---
 
