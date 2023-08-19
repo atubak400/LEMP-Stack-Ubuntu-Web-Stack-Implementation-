@@ -39,7 +39,7 @@ By following these steps, you'll successfully implement a LEMP stack, creating a
 
 ---
 
-## A. **Setting up and Connecting to an Ubuntu Virtual Machine**
+# A. **Setting up and Connecting to an Ubuntu Virtual Machine**
 
 ---
 
@@ -69,7 +69,7 @@ Connection Successful!
 
 ---
 
-## B. **Install Nginx**
+# B. **Install Nginx**
 
 ---
 
@@ -110,7 +110,7 @@ If you see the page below then your web server is correctly installed and access
 
 ---
 
-## C. **Install MYSQL**
+# C. **Install MYSQL**
 
 ---
 
@@ -157,7 +157,7 @@ Step 11: Exit mysql shell by running `exit`
 
 ---
 
-## D. **Install PHP**
+# D. **Install PHP**
 
 ---
 
@@ -171,7 +171,7 @@ Step 12: Install PHP and required modules by running `sudo apt install php-fpm p
 
 ---
 
-## E. **Configuring Nginx to use PHP Processor**
+# E. **Configuring Nginx to use PHP Processor**
 
 ---
 
@@ -277,7 +277,7 @@ If you see the text from 'echo' command you wrote to index.html file, then it me
 
 ---
 
-## F. **Testing PHP with Nginx**
+# F. **Testing PHP with Nginx**
 
 ---
 
@@ -320,7 +320,7 @@ You can always regenerate this file if you need it later.
 
 ---
 
-## G. **Retrieving data from MySQL database with PHP**
+# G. **Retrieving data from MySQL database with PHP**
 
 ---
 
