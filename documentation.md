@@ -177,9 +177,9 @@ Step 12: Install PHP and required modules by running `sudo apt install php-fpm p
 
 ---
 
-Step 13: Create a root web directory for my website by running `sudo mkdir /var/www/projectLEMP`
-Step 14: Assign ownership of the directory to current user by running `sudo chown -R $USER:$USER /var/www/projectLEMP`
-Step 15: Open a new Configuration file in Nginx's sites-enabled directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.
+Step 13: Create a root web directory for my website by running `sudo mkdir /var/www/projectLEMP`<br>
+Step 14: Assign ownership of the directory to current user by running `sudo chown -R $USER:$USER /var/www/projectLEMP`<br>
+Step 15: Open a new Configuration file in Nginx's sites-enabled directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.<br>
 
 ![root web directory](./Images/16.png)
 
