@@ -142,6 +142,7 @@ Step 9: Set password for mysql root user by running `ALTER USER 'root'@'localhos
 ---
 
 Step 10: Improve security by running `sudo mysql_secure_installation`. Answer 'Y' when prompted for each question.
+
 ![sudo systemctl status apache2](./Images/13.png)
 
 ---
