@@ -239,10 +239,16 @@ If any errors are reported, go back to your configuration file to review its con
 Step 18: Disable default Nginx host that is currently configured to listen on port 80by running: <br> 
 `sudo unlink /etc/nginx/sites-enabled/default`<br>
 
+![Test configuration](./Images/18.png)
+
+---
+
+---
+
 Step 19: Reload Nginx to apply the changes bby running <br>
 `sudo systemctl reload nginx`<br>
 
-![Test configuration](./Images/18.png)
+![Test configuration](./Images/19.png)
 
 If any errors are reported, go back to your configuration file to review its contents before continuing.
 
