@@ -198,24 +198,28 @@ Step 15: Open a new Configuration file in the sites available directory by runni
 ```nginx
 # /etc/nginx/sites-available/projectLEMP
 
+# Define configuration for the virtual server
 server {
-    listen 80;
-    server_name projectLEMP www.projectLEMP;
-    root /var/www/projectLEMP;
+    listen 80;  # Listen for incoming HTTP requests on port 80
+    server_name projectLEMP www.projectLEMP;  # Handle requests for these domain names
+    root /var/www/projectLEMP;  # Set the root directory for serving website files
 
-    index index.html index.htm index.php;
+    index index.html index.htm index.php;  # Define index file order for directory requests
 
+    # Handle requests to the root directory ("/")
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ =404;  # Try serving files, if not found, return a 404 error
     }
 
+    # Handle requests for PHP files
     location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+        include snippets/fastcgi-php.conf;  # Include configuration for FastCGI processing
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;  # Pass PHP requests to PHP-FPM
     }
 
+    # Deny access to files or directories starting with ".ht"
     location ~ /\.ht {
-        deny all;
+        deny all;  # Deny access to prevent sensitive files from being accessed
     }
 }
 ```
