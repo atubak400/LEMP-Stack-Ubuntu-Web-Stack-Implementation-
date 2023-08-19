@@ -271,7 +271,7 @@ or http://localhost:80 (if you're working locally)<br><br>
 
 If you see the text from 'echo' command you wrote to index.html file, then it means your Nginx site is working as expected. In the output you will see your server's public hostname (DNS name) and public IP address.
 
-# Congratulations, your LEMP stack is now fully configured.
+### Congratulations, your LEMP stack is now fully configured.
 
 ---
 
