@@ -219,7 +219,8 @@ Save and exit the nano editor with Ctrl + X, then press Y followed by Enter to s
 
 ---
 
-Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory by running <br> `sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`<br>
+Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory by running <br> 
+`sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`<br>
 This will tell Nginx to use the configuration next time it is reloaded.<br>
 
 Step 17: Test your configuration for syntax errors by typing `sudo nginx -t`
@@ -228,6 +229,20 @@ You should see:<br>
 `nginx: configuration file /etc/nginx/nginx.conf test is successful`<br>
 
 ![Test configuration](./Images/17.png)
+
+If any errors are reported, go back to your configuration file to review its contents before continuing.
+
+---
+
+---
+
+Step 18: Disable default Nginx host that is currently configured to listen on port 80by running: <br> 
+`sudo unlink /etc/nginx/sites-enabled/default`<br>
+
+Step 19: Reload Nginx to apply the changes bby running <br>
+`sudo systemctl reload nginx`<br>
+
+![Test configuration](./Images/18.png)
 
 If any errors are reported, go back to your configuration file to review its contents before continuing.
 
