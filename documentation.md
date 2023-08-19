@@ -122,7 +122,7 @@ If you see the page below then your web server is correctly installed and access
 
 Step 7: Use apt to install mysql-server by running `sudo apt install mysql-server`
 
-![sudo apt install mysql-server](./Images/9.png)
+![sudo apt install mysql-server](./Images/09.png)
 
 ---
 
