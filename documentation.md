@@ -228,7 +228,7 @@ You should see:<br>
 `nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`<br>
 `nginx: configuration file /etc/nginx/nginx.conf test is successful`<br>
 
-![Test configuration](./Images/17.png)
+![Activate configuration](./Images/17.png)
 
 If any errors are reported, go back to your configuration file to review its contents before continuing.
 
@@ -239,7 +239,7 @@ If any errors are reported, go back to your configuration file to review its con
 Step 18: Disable default Nginx host that is currently configured to listen on port 80by running: <br> 
 `sudo unlink /etc/nginx/sites-enabled/default`<br>
 
-![Test configuration](./Images/18.png)
+![Disable default Nginx](./Images/18.png)
 
 ---
 
@@ -248,9 +248,30 @@ Step 18: Disable default Nginx host that is currently configured to listen on po
 Step 19: Reload Nginx to apply the changes bby running <br>
 `sudo systemctl reload nginx`<br>
 
-![Test configuration](./Images/19.png)
+![Reload Nginx](./Images/19.png)
 
-If any errors are reported, go back to your configuration file to review its contents before continuing.
+---
+
+---
+
+Step 20: The website is now active, but the web root /var/www/projectLEMP is still empty. Create an index.html file in that location to test that your new server block works as expected by running<br>
+`sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`<br>
+
+![Index created](./Images/20.png)
+
+---
+
+---
+
+Step 21: Try to open your website URL on your browser using by running: <br> 
+http://<Public-IP-Address>:80
+or http://localhost:80 (if you're working locally)<br><br>
+
+![Index created](./Images/21.png)
+
+If you see the text from 'echo' command you wrote to index.html file, then it means your Nginx site is working as expected. In the output you will see your server's public hostname (DNS name) and public IP address.
+
+# Congratulations, your LEMP stack is now fully configured.
 
 ---
 
