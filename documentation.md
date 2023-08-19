@@ -219,8 +219,9 @@ Save and exit the nano editor with Ctrl + X, then press Y followed by Enter to s
 
 ---
 
-Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory by running <br> `sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`<br>.
+Step 16: Activate your configuration by linking to the config file from Nginx's sites-enabled directory by running <br> `sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`<br>
 This will tell Nginx to use the configuration next time it is reloaded.<br>
+
 Step 17: Test your configuration for syntax errors by typing `sudo nginx -t`
 You should see:<br>
 `nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`<br>
