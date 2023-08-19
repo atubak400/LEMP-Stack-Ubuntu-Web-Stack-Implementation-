@@ -135,7 +135,7 @@ Step 8: Log in to mysql console by running `sudo mysql`
 
 Step 9: Set password for mysql root user by running `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';` and exit mysql shell by running `exit`
 
-![sudo systemctl status apache2](./Images/12.png)
+![mysql code](./Images/12.png)
 
 ---
 
@@ -143,7 +143,7 @@ Step 9: Set password for mysql root user by running `ALTER USER 'root'@'localhos
 
 Step 10: Improve security by running `sudo mysql_secure_installation`. Answer 'Y' when prompted for each question.
 
-![sudo systemctl status apache2](./Images/13.png)
+![sudo mysql_secure_installation](./Images/13.png)
 
 ---
 
@@ -151,7 +151,7 @@ Step 10: Improve security by running `sudo mysql_secure_installation`. Answer 'Y
 
 Step 11: Exit mysql shell by running `exit`
 
-![sudo systemctl status apache2](./Images/14.png)
+![exit](./Images/14.png)
 
 ---
 
@@ -163,9 +163,9 @@ Step 11: Exit mysql shell by running `exit`
 
 ---
 
-Step 12: Install PHP and required modules by running `sudo apt install php-fpm php-mysql`
+Step 12: Install PHP and required modules by running `sudo apt install php-fpm php-mysql`. Answer 'Y' when prompted for a question.
 
-![sudo apt install mysql-server](./Images/15.png)
+![sudo apt install php-fpm php-mysql](./Images/15.png)
 
 ---
 
@@ -177,9 +177,49 @@ Step 12: Install PHP and required modules by running `sudo apt install php-fpm p
 
 ---
 
-Step 13: 
+Step 13: Create a root web directory for my website by running `sudo mkdir /var/www/projectLEMP`
 
 ![sudo mysql](./Images/16.png)
+
+---
+
+---
+
+Step 14: Assign ownership of the directory to current user by running `sudo chown -R $USER:$USER /var/www/projectLEMP`
+
+![Root folder ownership](./Images/17.png)
+
+---
+
+---
+
+Step 15: Open a new Configuration file in the sites available directory by running `sudo nano /etc/nginx/sites-available/projectLEMP` and paste the code below in the file.
+
+```nginx
+# /etc/nginx/sites-available/projectLEMP
+
+server {
+    listen 80;
+    server_name projectLEMP www.projectLEMP;
+    root /var/www/projectLEMP;
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
+```
+Save and exit the nano editor with Ctrl + X, then press Y followed by Enter to save your changes. 
 
 ---
 
@@ -207,15 +247,7 @@ Step 14: To edit the dir.conf file and change the order in which the index.php f
 
 Step 15: Replace the code you find in dir.conf with this:
 
-```apache
-<IfModule mod_dir.c>
-    # Change this:
-    # DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
-    # To this:
-    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>
-```
-Save and exit the nano editor
+
 
 ---
 
