@@ -239,9 +239,9 @@ Step 16: Activate your configuration by linking to the config file from Nginx's 
 
 Step 17: Test your configuration for syntax errors by typing `sudo nginx -t`
 You should see:<br>
-`nginx: the configuration file /etc/nginx/nginx.conf syntax is ok<br>
-nginx: configuration file /etc/nginx/nginx.conf test is successful<br>
-`
+`nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`<br>
+`nginx: configuration file /etc/nginx/nginx.conf test is successful`<br>
+
 ![Test configuration](./Images/18.png)
 
 If any errors are reported, go back to your configuration file to review its contents before continuing.
