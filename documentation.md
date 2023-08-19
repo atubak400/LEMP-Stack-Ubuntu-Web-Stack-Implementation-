@@ -264,7 +264,7 @@ Step 20: The website is now active, but the web root /var/www/projectLEMP is sti
 ---
 
 Step 21: Try to open your website URL on your browser using by running: <br> 
-http://<Public-IP-Address>:80
+http://Public-IP-Address:80
 or http://localhost:80 (if you're working locally)<br><br>
 
 ![Index created](./Images/21.png)
@@ -283,9 +283,38 @@ If you see the text from 'echo' command you wrote to index.html file, then it me
 
 ---
 
-Step 14: To edit the dir.conf file and change the order in which the index.php file is listed, run `sudo nano /etc/apache2/mods-enabled/dir.conf` 
+Step 22: To test if Nginx can correctly hand .php files to your PHP processor, create a test PHP file in your document root called index.php by running:<br> `nano /var/www/projectLEMP/info.php`
 
-![sudo systemctl status apache2](./Images/17.png)
+![sudo systemctl status apache2](./Images/22.png)
+
+and paste the code below in the opened file:
+
+```php
+<?php
+phpinfo();
+```
+
+---
+
+---
+
+Step 23: You can now access this page in your web browser by visiting the domain name or public IP address you've set up in your Nginx configuration file, followed by "/info. php". <br> 
+`http://'server_domain_or_IP'/info.php`
+
+You will see a web page containing detailed information about your server:
+
+![PHP info page](./Images/23.png)
+
+---
+
+---
+
+Step 24: After checking the relevant information about your PH server through that page, it's best to remove the file you created as it contains sensitive information about your PHP environment and your Ubuntu server. You can use rm to remove that fileby running <br> 
+`sudo rm /var/www/your_domain/info.php`
+
+![PHP info page](./Images/24.png)
+
+You can always regenerate this file if you need it later.
 
 ---
 
