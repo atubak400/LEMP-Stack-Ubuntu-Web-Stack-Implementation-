@@ -326,7 +326,7 @@ You can always regenerate this file if you need it later.
 
 ---
 
-Step 25: Connect to the MySQL console using the root account by running `sudo mysql`
+Step 25: Connect to the MySQL console using the root account by running `sudo mysql -u root -p`
 
 ![Connect to Mysql](./Images/25.png)
 
@@ -343,7 +343,7 @@ Step 26: Create a new database by running `CREATE DATABASE 'example_database`
 ---
 
 Step 27: Create a new user and grant him full privileges on the database you have just created and exit the MYSQL shell by running<br> `CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`<br>
-`GRANT ALL ON example_ database.* TO 'example_user'@'%';`<br>
+`GRANT ALL ON example_database.* TO 'example_user'@'%';`<br>
 `exit`
 
 ![Create database user](./Images/27.png)
@@ -352,26 +352,45 @@ Step 27: Create a new user and grant him full privileges on the database you hav
 
 ---
 
-Step 28: Paste the following php code in the blank file
+Step 28: Test if the new user has the proper permissions by logging in to the MySQL console again, this time using the custom user credentials by running: `mysql -u example_user -p`
 
-```php
-<?php
-phpinfo();
-?> 
+![log in database](./Images/28.png)
+
+Notice the -p flag in this command, which will prompt you for the password used when creating the example_user user. 
+
+---
+
+---
+
+Step 29: After logging in to the MySQL console, confirm that you have access to the example_database database by running <br>
+`SHOW DATABASE;`<br>
+This will give you the following output:
+
 ```
-![sudo systemctl status apache2](./Images/20.png)
----
+Output
++--------------------+
+| Database           |
++--------------------+
+| example_database   |
+| information_schema |
++--------------------+
+2 rows in set (0.000 sec)
+```
 
 ---
 
-Step 20: Open it in browser using `http://localhost/index.php` or `http://yourserveripaddress/test.php` depending on what you have. Should see the image below:
-![sudo systemctl status apache2](./Images/21.png)
-
 ---
 
----
+Step 30: Create a test table named todo_list by running `CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));` on the MYSQL console
 
-Step 22: For security reasons remove the index.php file by running `sudo rm /var/www/projectlamp/index.php`
+Step 31: Insert a few rows of content in the test table. e.g.<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My first important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My Second important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My Third important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My Fourth important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My Fifth important item");`<br>
+
+![sudo systemctl status apache2](./Images/30.png)
 
 ---
 
@@ -379,6 +398,11 @@ Step 22: For security reasons remove the index.php file by running `sudo rm /var
 
 # Congratulations! You have successfully installed Nginx, MySql and php on your server.
 
+```php
+<?php
+phpinfo();
+?> 
+```
 ---
 
 ---
