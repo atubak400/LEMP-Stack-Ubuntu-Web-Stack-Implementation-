@@ -390,7 +390,7 @@ Step 31: Insert a few rows of content in the test table. e.g.<br>
 `INSERT INTO example_database.todo_list (content) VALUES ("My fourth important item");`<br>
 `INSERT INTO example_database.todo_list (content) VALUES ("My fifth important item");`<br>
 
-![sudo systemctl status apache2](./Images/30.png)
+![create table](./Images/30.png)
 
 ---
 
@@ -405,8 +405,8 @@ You'll see the following output:
 
 ---
 
-Step 33: Create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in vour custom web root directory by running: <br>`nano /var/www/projectLEMP/todo_list.php`<br>
-Copy the code below to you opened file.
+Step 33: Create a PHP script that will connect to MySQL and query for your content. To do so, ceate a new PHP file in vour custom web root directory by running: <br>`nano /var/www/projectLEMP/todo_list.php`<br>
+Copy the code below to you opened file:
 
 ```php
 <?php
@@ -439,12 +439,14 @@ try {
 }
 ?>
 ```
+The following PHP script connects to the MySQL database and queries for the content of the todo list table, displays the results in a list. If there is a problem with the database connection, it will throw an exception.<br>
+Save and close the file when you are done editing.
 
 ---
 
 ---
 
-Step 33: Create a new database by running `CREATE DATABASE 'example_database`
+Step 34: Open your browser again and navigate back to `http://<Public_domain_or_IP>/todo_list.php`. You should now see something like this:
 
 ![Create Database](./Images/33.png)
 
@@ -456,7 +458,7 @@ Step 33: Create a new database by running `CREATE DATABASE 'example_database`
 ---
 
 ---
-# Congratulations! You have successfully installed Nginx, MySql and php on your server.
+# Congratulations! You have successfully installed, configured and tested Nginx, MySql and php on your server.
 
 ---
 
