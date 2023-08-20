@@ -326,31 +326,33 @@ You can always regenerate this file if you need it later.
 
 ---
 
-Step 15: Replace the code you find in dir.conf with this:
+Step 25: Connect to the MySQL console using the root account by running `sudo mysql`
 
-
-
----
-
----
-
-Step 17: Reload apache so that the changes can take effect by running `sudo systemctl reload apache2`
-
-![sudo systemctl status apache2](./Images/18.png)
+![Connect to Mysql](./Images/25.png)
 
 ---
 
 ---
 
-Step 18: Create and open a new file inside root your folder by running `sudo nano /var/www/projectlamp/index.php`
+Step 26: Create a new database by running `CREATE DATABASE 'example_database`
 
-![sudo systemctl status apache2](./Images/19.png)
+![Create Database](./Images/26.png)
+
+---
+
+---
+
+Step 27: Create a new user and grant him full privileges on the database you have just created and exit the MYSQL shell by running<br> `CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`<br>
+`GRANT ALL ON example_ database.* TO 'example_user'@'%';`<br>
+`exit`
+
+![Create database user](./Images/27.png)
 
 ---
 
 ---
 
-Step 19: Paste the following php code in the blank file
+Step 28: Paste the following php code in the blank file
 
 ```php
 <?php
