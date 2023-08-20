@@ -334,7 +334,7 @@ Step 25: Connect to the MySQL console using the root account by running `sudo my
 
 ---
 
-Step 26: Create a new database by running `CREATE DATABASE 'example_database`
+Step 26: Create a new database by running "CREATE DATABASE `example_database`;"
 
 ![Create Database](./Images/26.png)
 
@@ -385,10 +385,10 @@ Step 30: Create a test table named todo_list by running `CREATE TABLE example_da
 
 Step 31: Insert a few rows of content in the test table. e.g.<br>
 `INSERT INTO example_database.todo_list (content) VALUES ("My first important item");`<br>
-`INSERT INTO example_database.todo_list (content) VALUES ("My Second important item");`<br>
-`INSERT INTO example_database.todo_list (content) VALUES ("My Third important item");`<br>
-`INSERT INTO example_database.todo_list (content) VALUES ("My Fourth important item");`<br>
-`INSERT INTO example_database.todo_list (content) VALUES ("My Fifth important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My second important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My third important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My fourth important item");`<br>
+`INSERT INTO example_database.todo_list (content) VALUES ("My fifth important item");`<br>
 
 ![sudo systemctl status apache2](./Images/30.png)
 
@@ -396,13 +396,42 @@ Step 31: Insert a few rows of content in the test table. e.g.<br>
 
 ---
 
-# Congratulations! You have successfully installed Nginx, MySql and php on your server.
+Step 32: Create a new database by running `CREATE DATABASE 'example_database`
+
+![Create Database](./Images/31.png)
+
+---
+
+---
+
+Step 33: Create a new database by running `CREATE DATABASE 'example_database`
 
 ```php
 <?php
 phpinfo();
 ?> 
 ```
+
+![Create Database](./Images/32.png)
+
+---
+
+---
+
+Step 33: Create a new database by running `CREATE DATABASE 'example_database`
+
+![Create Database](./Images/33.png)
+
+---
+
+---
+
+
+---
+
+---
+# Congratulations! You have successfully installed Nginx, MySql and php on your server.
+
 ---
 
 ---
