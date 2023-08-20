@@ -396,9 +396,12 @@ Step 31: Insert a few rows of content in the test table. e.g.<br>
 
 ---
 
-Step 32: Confirm that the data was successfully saved to your table by running `SELECT * FROM example_database.todo_list;`
+Step 32: Confirm that the data was successfully saved to your table by running `SELECT * FROM example_database.todo_list;`<br>After confirming that you have valid data in your test table, you can exit the MySQL console:<br>
+You'll see the following output:
 
 ![Create Database](./Images/31.png)
+
+
 
 ---
 
