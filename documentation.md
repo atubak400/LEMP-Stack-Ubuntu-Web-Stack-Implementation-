@@ -396,7 +396,7 @@ Step 31: Insert a few rows of content in the test table. e.g.<br>
 
 ---
 
-Step 32: Confirm that the data was successfully saved to your table by running.<br>`SELECT * FROM example_database.todo_list;`<br>After confirming that you have valid data in your test table, you can exit the MySQL console.<br>
+Step 32: Confirm that the data was successfully saved to your table by running:<br>`SELECT * FROM example_database.todo_list;`<br>After confirming that you have valid data in your test table, you can exit the MySQL console.<br>
 You'll see the following output:
 
 ![Create Database](./Images/31.png)
@@ -405,15 +405,40 @@ You'll see the following output:
 
 ---
 
-Step 33: Create a new database by running `CREATE DATABASE 'example_database`
+Step 33: Create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in vour custom web root directory by running: <br>`nano /var/www/projectLEMP/todo_list.php`<br>
+Copy the code below to you opened file.
 
 ```php
 <?php
-phpinfo();
-?> 
-```
+// Database credentials
+$user = "example_user";      // Username to connect to the database
+$password = "PassWord.1";    // Password associated with the username
+$database = "example_database";  // Name of the database to be used
+$table = "todo_list";        // Name of the table from which data will be retrieved
 
-![Create Database](./Images/32.png)
+try {
+  // Establish a database connection using PDO
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+
+  // Display a heading for the todo list
+  echo "<h2>TODO</h2><ol>";
+
+  // Loop through each row of the SELECT query's result
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    // Display each "content" column value as a list item
+    echo "<li>" . $row['content'] . "</li>";
+  }
+
+  // Close the ordered list
+  echo "</ol>";
+
+} catch (PDOException $e) {
+    // If an error occurs, display an error message and terminate the script
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+?>
+```
 
 ---
 
