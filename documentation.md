@@ -453,14 +453,7 @@ Step 34: Open your browser again and navigate back to `http://<Public_domain_or_
 ---
 
 ---
-
-
----
-
----
 # Congratulations! You have successfully installed, configured and tested Nginx, MySql and php on your server.
-
----
 
 ---
 
