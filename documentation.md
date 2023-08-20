@@ -334,7 +334,7 @@ Step 25: Connect to the MySQL console using the root account by running `sudo my
 
 ---
 
-Step 26: Create a new database by running "CREATE DATABASE `example_database`;"
+Step 26: Create a new database by running "CREATE DATABASE ``example_database``;"
 
 ![Create Database](./Images/26.png)
 
